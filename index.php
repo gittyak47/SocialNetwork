@@ -132,5 +132,3 @@ if(isset($_POST['user_login']) && isset($_POST['password_login'])){
             </tr>
         </table>
 <?php include ( dirname(__FILE__).'/inc/footer.inc.php' );?>
-    </body>
-</html>
