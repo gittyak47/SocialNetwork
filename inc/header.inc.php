@@ -16,13 +16,14 @@ if(!isset($_SESSION['user'])){
         <script src="<?php echo 'js/jquery-2.2.0.min.js'?>" type="text/javascript"></script>
     </head>
     <body>
+        <div id="page" style="min-height:100%">
         <div class="headerMenu">
             <div id="wrapper">
                 <div class="logo">
                     SocialNetwork
                 </div>
                 <div class="searchBox">
-                    <input name="q" id="search" placeholder="Search anything...&#128269;" autofocus autocomplete="on">
+                    <input name="q" id="search" placeholder="Search anything...&#128269;" autocomplete="on">
                 </div>
             </div>
         </div>
@@ -39,6 +40,7 @@ if(!isset($_SESSION['user'])){
             else{ 
                 ?>
                 <a href="profile.php?u=<?php echo $username; ?>"><?php echo $username; ?>'profile</a>
+                <a href="friend_requests.php">Friend requests</a>
                 <a href="account_settings.php">Account Setting</a>
                 <a href="logout.php">log out</a>
             <?php

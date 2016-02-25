@@ -52,7 +52,6 @@ if($reg){
                         else{
                             //encrypt password using md5 encryption method
                             $pswd = md5($pswd);
-                            /*$query = "INSERT INTO `users` (`username`, `fname`, `lname`, `email`, `password`, `sign_up_date`, `activated`) VALUES('".$fn."','".$ln."','".$em."','".$pswd."','".$d."','0')";*/
                             $sql = " INSERT INTO `users`(`username`, `fname`, `lname`, `email`, `password`, `sign_up_date`, `activated`) VALUES ('".$un."','".$fn."','".$ln."','".$em."','".$pswd."','".$d."','0')";
                             if($conn->query($sql)){
                             die("<h2>Welcome to SocialNetwork</h2>, Login to get Started...");

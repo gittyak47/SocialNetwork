@@ -1,4 +1,4 @@
-<div class="headerMenu" style="position:absolute;bottom:0">
+<div class="headerMenu" style="">
             <div id="wrapper">
                 <div class="logo">
                     SocialNetwork
@@ -8,3 +8,6 @@
                 </div>
             </div>
         </div>
+</div>
+</body>
+</html>

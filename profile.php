@@ -6,7 +6,7 @@ if(!isset($_GET['u'])){
 if(isset($_GET['u'])){
     //$usrname = mysqli_real_escape_string($conn, $_GET['u']);
     $usrname = $_GET['u'];
-    //if(ctype_alnum($usrname)){
+    if(ctype_alnum($usrname)){
         //check if user exists
         $check = mysqli_query($conn, "SELECT * FROM users WHERE username='".$usrname."'");
         if(mysqli_num_rows($check) == 1){
@@ -20,7 +20,7 @@ if(isset($_GET['u'])){
             echo '<h2>User does not exist</h2>';
             exit();
         }
-    //}
+    }
 }
 ?>
 <style>
@@ -203,9 +203,13 @@ USING POST METHOD
     */
 //////////////////////////////////
     ?>
-<!--<input type="submit" name="addfriend" value="Add as friend"/>    -->
+<input type="submit" name="sendmsg" value="Send Msg" />
 </form>
 <?php
+    
+    if(isset($_POST['sendmsg'])){
+        header("location:send_msg.php?u=$usrname");
+    }
 // SCRIPT TO SEND FRIEND REQUESTS    
     /*
     #############################################################
